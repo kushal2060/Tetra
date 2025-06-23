@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fd023b;
+}
+
+.welcome-container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-size: 50px;
+    font-family: Arial, sans-serif;
+    color: whitesmoke;
+}
+
+h2 {
+    font-size: 15px;
+    color: whitesmoke;
+    font-family: Arial, sans-serif;
+    margin-bottom: 35px;
+}
+
+.enter-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 10px;
+    color: whitesmoke;
+    background-color: #333;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.enter-button:hover {
+    background-color: #555;
+    cursor: crosshair; /* Change cursor to + sign on hover */
+}

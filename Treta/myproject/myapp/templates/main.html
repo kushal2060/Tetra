@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Treta</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="welcome-container">
+        <h1 class="aaa">THE TRETA</h1>
+        <h2 class="aab">The Treta welcomes you to their domain.</h2>
+        <button class="enter-button" onclick="enterWebsite()">Enter Website</button>
+    </div>
+
+    <script>
+        function enterWebsite() {
+            window.location.href = '{% url "homepage" %}';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{% load static %}
+
+<!-- credit_card_app/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>User Information Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>User Information Form</h1>
+        <form id="userForm" method="post" action="{% url 'store_credit_card' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username"name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="creditCard">Credit Card:</label>
+                <div class="creditCardContainer">
+                    <input type="password" id="creditCard" name="encrypted_credit_card" required>
+                    <span class="eye-icon" onclick="toggleCreditCardVisibility()">👁️</span>
+                </div>
+            </div>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+            <button type="button" onclick="openCreditCardRetrievalForm()">Retrieve Credit Card</button>
+            
+        </form>
+        
+    </div>
+
+    <!-- Credit Card Retrieval Modal -->
+    <div id="creditCardRetrievalModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCreditCardRetrievalForm()">&times;</span>
+            <h2>Credit Card Retrieval</h2>
+            <form id="creditCardRetrievalForm" method="post" action="{% url 'retrieve_credit_card' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="retrievalEmail">Enter Email:</label>
+                    <input type="email" id="retrievalEmail" name="retrievalEmail" required>
+
+                </div>
+                <div id="decryptedCreditCardContainer"></div>
+                <button id="retrieveBtn" type="button">Retrieve Credit Card</button>
+                <div id="resultContainer"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Include JS file at the end to ensure DOM is fully loaded -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

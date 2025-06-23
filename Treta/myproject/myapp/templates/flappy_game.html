@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Game</title>
+    <!-- Add any additional stylesheets or scripts if needed -->
+    <link rel="stylesheet" type="text/css" href="{% static 'style-flappy-game.css' %}">
+</head>
+<body>
+
+    <nav>
+        <h1>      Flappy Bird</h1>
+    </nav>
+
+    <div class="game-container">
+        <!-- Assuming your Unity game HTML file is named "game.html" -->
+        <iframe src="{% static 'games/index.html' %}" class="game-iframe" frameborder="0"></iframe>
+    </div>
+
+</body>
+</html>
+

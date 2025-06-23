@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <!-- Add any additional stylesheets or scripts if needed -->
+    <link rel="stylesheet" type="text/css" href="{% static 'style-games.css' %}">
+</head>
+<body>
+
+    <div class="game-container">
+        <div class="game-box">
+            <h2>Flappy Bird</h2>
+            <a href="{% url 'flappy_game' %}" class="play-button">Play</a>
+        </div>
+    </div>
+
+</body>
+</html>
+

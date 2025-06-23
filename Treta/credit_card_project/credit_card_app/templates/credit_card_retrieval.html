@@ -1,0 +1,17 @@
+<!-- credit_card_app/templates/credit_card_retrieval.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Retrieval</title>
+</head>
+<body>
+    {% if credit_card %}
+        <h1>Decrypted Credit Card Information:</h1>
+        <p>{{ credit_card }}</p>
+    {% elif error_message %}
+        <p>{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>

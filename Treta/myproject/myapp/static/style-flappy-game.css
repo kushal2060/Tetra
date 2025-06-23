@@ -1,0 +1,20 @@
+/* static/myapp/style-flappy-game.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.game-container {
+    position: relative;
+    width: 1980px; /* Set width to 1920 */
+    height: 1080px; /* Set height to 1080 */
+}
+
+.game-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 60%;
+}

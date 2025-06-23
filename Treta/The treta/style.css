@@ -1,0 +1,44 @@
+ body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color:#fd023b;
+            
+
+        }
+ .welcome-container {
+            text-align: center;
+        }
+
+ h1 {
+            margin-bottom:15px;
+            font-size: 50px;
+            font-family:sans-serif;
+            color: whitesmoke;
+        }
+
+ h2{ 
+    font-size: 15px;
+    color: whitesmoke;
+    font-family: sans-serif;
+    margin-bottom: 35px;
+
+ }
+ .enter-button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: blub;
+            margin-top: 15px;
+            border-radius: 10px 5px;
+            color: whitesmoke;
+            background-color: black;
+            text-decoration: blink;
+            box-shadow: floralwhite;
+            cursor: crosshair;
+
+
+
+
+        }

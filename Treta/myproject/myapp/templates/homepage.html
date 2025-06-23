@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Domain</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style-homepage.css' %}">
+</head>
+<body>
+
+    <nav>
+        <h1>THE TRETA</h1>
+    </nav>
+
+    <div class="section-container">
+        <a href="projects.html" class="section-box">
+            <h2>Projects</h2>
+        </a>
+        <a href="{% url 'games' %}" class="section-box">
+            <h2>Games</h2>
+        </a>
+        <a href="events.html" class="section-box">
+            <h2>Events</h2>
+        </a>
+        <a href="members.html" class="section-box">
+            <h2>Members</h2>
+        </a>
+        <a href="gallery.html" class="section-box">
+            <h2>Gallery</h2>
+        </a>
+        <a href="news.html" class="section-box">
+            <h2>News</h2>
+        </a>
+        <!-- Add more section boxes as needed -->
+    </div>
+
+</body>
+</html>
+
